@@ -18,9 +18,9 @@ read
 #修改 yum 源
 function stpe_1()
 {
-	rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-	rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
-	rpm -Uvh  http://dev.mysql.com/get/mysql57-community-release-el7-9.noarch.rpm
+	rpm -Uvh epel-release-latest-7.noarch.rpm
+	rpm -Uvh webtatic-release.rpm
+	rpm -Uvh mysql57-community-release-el7-9.noarch.rpm
 	yum -y install wget vim
 }
 
@@ -47,7 +47,6 @@ function stpe_4()
 	systemctl reload firewalld
 
 	# 修改 Nginx 配置
-	wget http:/nginx.conf
 	mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf_tmp
 	cp nginx.conf /etc/nginx/
 
@@ -61,6 +60,7 @@ stpe_1
 stpe_2
 stpe_3
 stpe_4
+
 
 
 
