@@ -65,12 +65,12 @@ stpe_4
 clear
 echo -e ""
 echo -e "${GREEN}install success.${RESET}"
-echo -e ""
+echo -e 'mysql password:'`grep 'temporary password' /var/log/mysqld.log | awk -F 'localhost: ' '{print $2}'`
 echo -e "$GREEN*************************************************************$RESET"
 echo `php -v` | awk '{print $1$2}'
 echo `mysql -V` | awk -F ',' '{print $1}'
 nginx -v
-echo -e 'mysql password:'`grep 'temporary password' /var/log/mysqld.log | awk -F 'localhost: ' '{print $2}'`
+echo -e ""
 
 
 
