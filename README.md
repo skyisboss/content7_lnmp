@@ -7,3 +7,6 @@
 - CentOS版本： 7.0
 
 `使用`
+>> git https://github.com/skyisboss/content7_lnmp.git && cd content7_lnmp && chmod a+x install.sh && ./install.sh
+
+
