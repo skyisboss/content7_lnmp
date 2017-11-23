@@ -8,6 +8,6 @@
 
 `使用`
 
-> git clone https://github.com/skyisboss/content7_lnmp.git && cd content7_lnmp && chmod a+x install.sh && sh install.sh
+> yum -y install git && git clone https://github.com/skyisboss/content7_lnmp.git && cd content7_lnmp && chmod a+x install.sh && sh install.sh
 
 
